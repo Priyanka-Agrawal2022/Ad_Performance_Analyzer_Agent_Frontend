@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Dashboard from "./pages/Dashboard";
+import Upload from "./pages/Upload";
+import Analyze from "./pages/Analyze";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    { path: "", element: <Dashboard /> },
+    { path: "upload", element: <Upload /> },
+    { path: "analyze", element: <Analyze /> },
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RouterProvider router={router}>
+        <Dashboard />
+      </RouterProvider>
+    </>
   );
 }
 
