@@ -37,12 +37,11 @@ The Ad Performance Analyzer is a React.js application designed to help users ana
 ## 📁 Project Structure
 ```
 src/
-├── components/        # Reusable UI components
 ├── pages/             # Page components
 ├── styles/            # CSS and styling files
-├── utils/             # Helper functions
 ├── App.js             # Main app component
 ├── index.js           # Entry point
+├── index.css          # Global CSS styles
 ```
 
 ---
