@@ -11,7 +11,7 @@ export default function Analyze(props) {
 
     setTimeout(async () => {
       try {
-        const response = await fetch("http://localhost:8000/analyze");
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/analyze`);
         const result = await response.json();
 
         if (result.success) {
