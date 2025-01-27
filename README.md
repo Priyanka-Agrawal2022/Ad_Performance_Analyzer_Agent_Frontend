@@ -4,6 +4,9 @@ The Ad Performance Analyzer is a React.js application designed to help users ana
 
 ---
 
+# [Live Demo](https://ad-performance-analyzer-agent-frontend.onrender.com)
+
+
 ## 🌟 Features
 
 - **Interactive Table:** Displays ad performance metrics in a structured format.
@@ -59,6 +62,8 @@ src/
 - **Frontend** React.js
 - **Styling:** CSS modules
 - **API Integration:** Fetch
+- **Hosting:** Render
+- **Containerization:** Docker
 
 ---
 
