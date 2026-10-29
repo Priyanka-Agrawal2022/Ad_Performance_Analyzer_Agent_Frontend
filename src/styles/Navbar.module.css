@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 60px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-1);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.brandMark {
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-2);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.link:hover {
+  color: var(--text-1);
+  background-color: var(--accent-faint);
+}
+
+.active {
+  color: var(--accent) !important;
+  background-color: var(--accent-faint);
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 4%;
+  }
+
+  .link {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}

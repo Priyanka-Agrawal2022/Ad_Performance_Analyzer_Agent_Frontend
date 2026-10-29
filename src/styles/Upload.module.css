@@ -1,57 +1,197 @@
-* {
-  background-color: #d400ff5e;
+.page {
+  min-height: calc(100vh - 60px);
+  background-color: var(--bg-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 5%;
 }
 
-.uploadDiv {
-  padding: 2% 10%;
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.title {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-1);
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--text-2);
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.dropzone {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  min-height: 220px;
+  background: var(--bg-raised);
+  border: 2px dashed var(--border);
+  border-radius: 14px;
+  padding: 36px 24px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
 }
 
-.uploadHeading {
-  font-size: 30px;
+.dropzone:hover {
+  border-color: var(--accent);
+  background: var(--accent-faint);
+}
+
+.hasFile {
+  border-color: var(--accent);
+  border-style: solid;
+  background: var(--accent-faint);
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.dropIcon {
+  font-size: 32px;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 14px;
+  font-style: normal;
+  display: block;
+}
+
+.dropLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-1);
+  margin: 0 0 6px;
   text-align: center;
 }
 
-.uploadForm {
+.dropHint {
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 0;
+}
+
+.fileInfo {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
-.uploadForm input {
-  font-size: 20px;
+.fileIcon {
+  font-size: 36px;
+}
+
+.fileName {
+  font-size: 15px;
   font-weight: 600;
+  color: var(--text-1);
+  word-break: break-all;
+  text-align: center;
 }
 
-.btn {
+.fileSize {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.ctaBtn {
+  background: var(--cta);
   color: #fff;
-  font-size: 25px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
   font-weight: 600;
-  padding: 8px 18px;
-  border: 4px solid #e700ff;
-  border-radius: 20px;
-  background-color: #000;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background 0.15s, transform 0.15s, opacity 0.15s;
 }
 
-@media screen and (max-width: 768px) {
-  .uploadDiv {
-    padding: 3% 6%;
-  }
+.ctaBtn:hover:not(:disabled) {
+  background: var(--cta-hover);
+  transform: translateY(-1px);
+}
 
-  .uploadForm {
-    flex-direction: column;
-  }
+.ctaBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
 
-  .uploadForm input {
-    width: 100%;
-  }
+.successCard {
+  background: var(--bg-raised);
+  border: 1px solid var(--success-bd);
+  border-radius: 18px;
+  padding: 52px 36px;
+  text-align: center;
+}
 
-  .btn {
-    font-size: 20px;
+.successMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--success-bg);
+  border: 1px solid var(--success-bd);
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--success);
+  margin-bottom: 20px;
+}
+
+.successTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-1);
+  margin: 0 0 10px;
+}
+
+.successSub {
+  font-size: 15px;
+  color: var(--text-2);
+  margin: 0 0 32px;
+}
+
+.successActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ghostBtn {
+  background: transparent;
+  color: var(--text-2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 24px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.ghostBtn:hover {
+  color: var(--text-1);
+  border-color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 60px 4%;
+    align-items: flex-start;
   }
 }
